@@ -106,7 +106,7 @@ goto :EOF
 :calc
 rem Ensure that gitbranch_ln has no line returns
 set "gitbranch_ln=%~1"
-call :eval
+rem call :eval
 goto :EOF
 
 :drop_ext
