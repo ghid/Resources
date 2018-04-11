@@ -90,17 +90,17 @@ goto :EOF
 
 :eval
 rem Calculate changes count
-if "%gitbranch_ln%" == "##" (
-  rem save first line, this must be branch
-) else if "%gitbranch_ln:~0,2%" == "??" (
-  call :inc_add
-) else if "%gitbranch_ln:~0,1%" == "A" (
-  call :inc_add
-) else if "%gitbranch_ln:~0,1%" == "D" (
-  call :inc_del
-) else if "%gitbranch_ln:~0,1%" == "M" (
-  call :inc_chg
-)
+rem if "%gitbranch_ln%" == "##" (
+rem   rem save first line, this must be branch
+rem ) else if "%gitbranch_ln:~0,2%" == "??" (
+rem   call :inc_add
+rem ) else if "%gitbranch_ln:~0,1%" == "A" (
+rem   call :inc_add
+rem ) else if "%gitbranch_ln:~0,1%" == "D" (
+rem   call :inc_del
+rem ) else if "%gitbranch_ln:~0,1%" == "M" (
+rem   call :inc_chg
+rem )
 goto :EOF
 
 :calc
@@ -172,9 +172,9 @@ goto prepare
 )
 :skip_not_a_git
 
-set gitbranch_add=0
-set gitbranch_chg=0
-set gitbranch_del=0
+rem set gitbranch_add=0
+rem set gitbranch_chg=0
+rem set gitbranch_del=0
 
 rem Set "gitbranch" to full contents of %git_out% file
 set /P gitbranch=<"%git_out%"
