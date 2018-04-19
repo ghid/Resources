@@ -21,7 +21,7 @@ echo Copy executables...
 copy /Y *.exe %VIM_BIN%\vim80\
 echo.
 echo Copy runtime files...
-xcopy /E /D ..\runtime\*.* %VIM_BIN%\vim80\
+xcopy /Y /E /D ..\runtime\*.* %VIM_BIN%\vim80\
 
 popd
 
